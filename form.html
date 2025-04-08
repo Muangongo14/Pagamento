@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formulario.css">
+    <title>Formulário de Pagamento</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Formulário de Pagamento</h1>
+        <form id="paymentForm" onctype="multpart/form-data"></form>>
+            <label for=""> Nome completo</label>
+            <input type="text" id="clientName" placeholder="Digite o seu nome" required>
+            <label for=""> Valor do pagamento</label>
+            <input type="number" id="amount" placeholder="Digite o valor em KZ" required>
+
+            <label for="bankName">Nome do Banco</label>
+            <select id="bankName"  required>
+                <option value="Bfa">Bfa</option>
+                <option value="Bai">Bai</option>
+                <option value="Atlantico">Atlantico</option>
+                <option value="Outro">Outro</option>
+            </select>
+
+            <label for="paymentMethod">Modo de Pagamento</label>
+            <select id="paymentMethod" required>
+                <option value="transferencia">Transferência Multi Banco</option>
+                <option value="multicaixa">Multicaixa Express</option>
+                <option value="deposito">Depósito</option>
+            </select>
+
+            <label for="paymentDate">Data de Pagamento</label>
+            <input type="date" id="paymentDate" required>
+
+            <label for="comprovante">Comprovativo:</label>
+            <input type="file" id="comprovante" accept="image/*" required>
+
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="message"></div>
+    </div>
+    
+    </div>
+
+    <script src="foRmuLaRio.js"></script>
+</body>
+</html>
